@@ -21,6 +21,7 @@ const alignPropMap = {
 
 const BaseRowStyle = styled.div`
   box-sizing: border-box;
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

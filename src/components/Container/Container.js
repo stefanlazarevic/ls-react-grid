@@ -7,6 +7,7 @@ import media from '../../util/media'
 const ContainerFluid = styled.div`
   box-sizing: border-box;
   display: flex;
+  position: relative;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;

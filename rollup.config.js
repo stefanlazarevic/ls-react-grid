@@ -14,13 +14,15 @@ export default {
       file: pkg.main,
       format: 'cjs',
       sourcemap: true,
-      globals: { 'styled-components': 'styled' }
+      globals: { 'styled-components': 'styled' },
+      external: ['styled-components']
     },
     {
       file: pkg.module,
       format: 'es',
       sourcemap: true,
-      globals: { 'styled-components': 'styled' }
+      globals: { 'styled-components': 'styled' },
+      external: ['styled-components']
     }
   ],
   plugins: [
@@ -35,6 +37,5 @@ export default {
     }),
     resolve(),
     commonjs()
-  ],
-  external: ['styled-components']
+  ]
 }
