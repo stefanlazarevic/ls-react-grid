@@ -25,9 +25,12 @@ export default class App extends Component {
       <Fragment>
         <Header>
           <Container>
-            <Row>
+            <Row justify="end">
               <Column>
                 <h1>LS React Grid</h1>
+              </Column>
+              <Column>
+                test
               </Column>
             </Row>
           </Container>
