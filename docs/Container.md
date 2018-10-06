@@ -1,6 +1,10 @@
 # Container component
 
+## Basic Usage
+
 ``<Container>`` component represents the root of a grid layout, but it can be used more then once based on the design you are building.
+
+## Responsiveness
 
 ``Container`` by the default use responsive pixel width to make sure your layout look good across all viewport and device sizes.
 
@@ -19,6 +23,12 @@ To make ``Container`` always 100% across all viewports use property ``fluid``.
 prop | type | values | description
 ---|---|---|---|
 fluid | boolean | true \| false | Make container ``width: 100%`` across all viewport and device sizes.
+
+### Import
+
+```js
+import { Container, Row } from 'ls-react-grid'
+```
 
 ```jsx
 <Container fluid>

@@ -4,19 +4,25 @@ import { Container, Row, Column } from 'ls-react-grid'
 import { Box } from '../components/Box';
 
 export default props => (
-    <Section>
+      <Section>
         <Container>
           <Row>
             <Column>
-              <SectionTitle>Fixed Column Width</SectionTitle>
+              <SectionTitle>Reversed Direction</SectionTitle>
             </Column>
           </Row>
-          <Row>
-            <Column fixed width="200px">
-              <Box>200px</Box>
+          <Row reversed>
+            <Column>
+              <Box>1</Box>
             </Column>
             <Column>
-              <Box>auto</Box>
+              <Box>2</Box>
+            </Column>
+            <Column>
+              <Box>3</Box>
+            </Column>
+            <Column>
+              <Box>4</Box>
             </Column>
           </Row>
         </Container>

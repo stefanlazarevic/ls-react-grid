@@ -6,19 +6,19 @@ import { Box } from '../components/Box';
 export default props => (
     <Section>
         <Container>
-          <Row>
+            <Row>
             <Column>
-              <SectionTitle>Fixed Column Width</SectionTitle>
+                <SectionTitle>Reversed Column</SectionTitle>
             </Column>
-          </Row>
-          <Row>
-            <Column fixed width="200px">
-              <Box>200px</Box>
+            </Row>
+            <Row>
+            <Column reversed>
+                <Box>1</Box>
+                <Box>2</Box>
+                <Box>3</Box>
+                <Box>4</Box>
             </Column>
-            <Column>
-              <Box>auto</Box>
-            </Column>
-          </Row>
+            </Row>
         </Container>
-      </Section>
+    </Section>
 );

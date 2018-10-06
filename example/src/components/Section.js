@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
   padding: 2rem 0;
   [data-container] {
-    height: 200px;
+    height: 140px;
     background: #f5f5f5;
     border: 1px solid #eee;
     [data-box] {

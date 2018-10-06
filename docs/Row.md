@@ -4,9 +4,13 @@
 
 Use ``<Row>`` component as a column wrapper when you want to define a row in your layout.
 
-```jsx
-import { Row, Column } from 'ls-react-grid'
+### Import
 
+```js
+import { Row, Column } from 'ls-react-grid'
+```
+
+```jsx
 <Row>
     <Column>1</Column>
     <Column>2</Column>

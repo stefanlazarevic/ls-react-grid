@@ -6,7 +6,7 @@
 
 Like Bootstrap, React Grid system uses a series of containers, rows, and columns to layout and align content. It is built with [styled-components](https://www.styled-components.com/docs/basics) and [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) and is fully responsive.
 
-LS React Grid does not come with styled-components to prevent known issue #[several instances of styled-components](https://www.styled-components.com/docs/faqs#why-am-i-getting-a-warning-about-several-instances-of-module-on-the-page) and because of that it is required to have library in your local node_modules.
+LS React Grid does not come with styled-components to prevent known issue #[several instances of styled-components](https://www.styled-components.com/docs/faqs#why-am-i-getting-a-warning-about-several-instances-of-module-on-the-page) and because of that it is required to have library in your local ``node_modules``.
 
 ## Install
 
@@ -47,6 +47,16 @@ See what you can do with this package [here](https://stefanlazarevic.github.io/l
 - [Container](https://github.com/stefanlazarevic/ls-react-grid/blob/master/docs/Container.md)
 - [Row](https://github.com/stefanlazarevic/ls-react-grid/blob/master/docs/Row.md)
 - [Column](https://github.com/stefanlazarevic/ls-react-grid/blob/master/docs/Column.md)
+
+## Change Log
+
+#### v0.2.0
+
+- Added Component initial documentation.
+- Fixed column ``hidden`` logic for all media breakpoints.
+- Renamed column property ``noGutter`` to ``noPadding``.
+- Instead of creating fixed column size using following syntax ``<Column fixed style={{ width: 200 }}></Column>`` you can use shorthand syntax ``<Column fixed width="200px"></Column>``. **Note:** It is required to explicitly say what unit is used for width.
+
 ## License
 
 MIT © [stefanlazarevic @ lazarevicstefan.com](https://github.com/stefanlazarevic)

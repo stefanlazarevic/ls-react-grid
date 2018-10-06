@@ -3,10 +3,16 @@ import React, { Component, Fragment } from 'react'
 import { Container, Row, Column } from 'ls-react-grid'
 import styled from 'styled-components'
 
-import FixedColumns from './Section/FixedColumns'
+import Columns12 from './Section/Columns12'
 import ResponsiveColumns from './Section/ResponsiveColumns'
 import AutoWidthColumns from './Section/AutoWidthColumns'
 import GutterColumns from './Section/GutterColumns'
+import ReversedDirection from './Section/ReversedDirection'
+import ColumnLayout from './Section/ColumnLayout'
+import ReversedColumnLayout from './Section/ReversedColumnLayout'
+import FixedColumns from './Section/FixedColumns'
+import HorizontalAlignment from './Section/HorizontalAlignment'
+import VerticalAlignment from './Section/VerticalAlignment'
 
 const Header = styled.div`
   background-color: #f5f5f5;
@@ -29,16 +35,19 @@ export default class App extends Component {
               <Column>
                 <h1>LS React Grid</h1>
               </Column>
-              <Column>
-                test
-              </Column>
             </Row>
           </Container>
         </Header>
-        <FixedColumns />
+        <Columns12 />
         <ResponsiveColumns />
         <AutoWidthColumns />
         <GutterColumns />
+        <ReversedDirection />
+        <ColumnLayout />
+        <ReversedColumnLayout />
+        <FixedColumns />
+        <HorizontalAlignment />
+        <VerticalAlignment />
       </Fragment>
     )
   }

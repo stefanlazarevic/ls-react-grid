@@ -8,20 +8,20 @@ export default props => (
         <Container>
           <Row>
             <Column>
-              <SectionTitle>Gutter</SectionTitle>
+              <SectionTitle>No Padding columns</SectionTitle>
             </Column>
           </Row>
           <Row>
-            <Column noGutter xs={3}>
+            <Column noPadding xs={3}>
               <Box>3</Box>
             </Column>
-            <Column noGutter xs={3}>
+            <Column noPadding xs={3}>
               <Box>3</Box>
             </Column>
-            <Column noGutter xs={3}>
+            <Column noPadding xs={3}>
               <Box>3</Box>
             </Column>
-            <Column noGutter xs={3}>
+            <Column noPadding xs={3}>
               <Box>3</Box>
             </Column>
           </Row>

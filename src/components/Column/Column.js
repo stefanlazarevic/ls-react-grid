@@ -7,6 +7,8 @@ import media from '../../util/media'
 const width = base => {
   if (base === 'hidden') {
     return 'display: none;'
+  } else if (base === 'auto') {
+    return 'flex: 1 1 auto;'
   } else {
     return `
       display: flex;
@@ -36,7 +38,7 @@ const FixedColumn = styled(ReversedColumn)`
 `
 
 const NoPaddingColumn = styled(FixedColumn)`
-${({ noPadding }) => noPadding && `padding-left: 0; padding-right: 0;`}
+  ${({ noPadding }) => noPadding && `padding-left: 0; padding-right: 0;`}
 `
 
 const XSColumn = styled(NoPaddingColumn)`
@@ -56,10 +58,10 @@ const XLGColumn = styled(LGColumn)`
 `
 
 const Column = props => {
-  const { children, ...rest } = props
+  const { children, width, style, ...rest } = props
 
   return (
-    <XLGColumn {...rest}>
+    <XLGColumn style={Object.assign({ ...style }, { width: width })} {...rest}>
       {children}
     </XLGColumn>
   )
@@ -73,7 +75,7 @@ Column.propTypes = {
   sm: PropTypes.oneOf(['hidden', 'auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
   md: PropTypes.oneOf(['hidden', 'auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
   lg: PropTypes.oneOf(['hidden', 'auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
-  xlg: PropTypes.oneOf(['hidden', 'auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
+  xlg: PropTypes.oneOf(['hidden', 'auto', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 }
 
 export default Column
