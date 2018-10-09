@@ -31,7 +31,7 @@ export default class App extends Component {
       <Fragment>
         <Header>
           <Container>
-            <Row justify="end">
+            <Row reverse wrapped="none" justify="end">
               <Column>
                 <h1>LS React Grid</h1>
               </Column>

@@ -1,7 +1,8 @@
-import React from 'react';
-import { Section, SectionTitle } from '../components/Section';
+import React from 'react'
+import { Section, SectionTitle } from '../components/Section'
 import { Container, Row, Column } from 'ls-react-grid'
-import { Box } from '../components/Box';
+import { Box } from '../components/Box'
+import styled from 'styled-components'
 
 export default props => (
     <Section>

@@ -1,4 +1,3 @@
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
@@ -19,6 +18,12 @@ const alignPropMap = {
   stretch: 'flex-stretch'
 }
 
+const wrapPropMap = {
+  wrap: 'wrap',
+  none: 'nowrap',
+  reversed: 'wrap-reverse'
+}
+
 const BaseRowStyle = styled.div`
   box-sizing: border-box;
   position: relative;
@@ -29,8 +34,15 @@ const BaseRowStyle = styled.div`
   margin-right: -15px;
 `
 
-const StyledRow = styled(BaseRowStyle)`
+const WrapRow = styled(BaseRowStyle)`
+  ${({ wrapped }) => wrapped && wrapPropMap[wrapped] && `flex-wrap: ${wrapPropMap[wrapped]};`}
+`
+
+const ReversedRow = styled(WrapRow)`
   ${({ reversed }) => reversed && `flex-direction: row-reverse;`}
+`
+
+const StyledRow = styled(ReversedRow)`
   ${({ justify }) => justify && `justify-content: ${justifyPropMap[justify]};`}
   ${({ align }) => align && `align-items: ${alignPropMap[align]};`}
 `
@@ -46,7 +58,11 @@ const Row = props => {
 }
 
 Row.propTypes = {
-  reverse: PropTypes.bool,
+  reversed: PropTypes.bool,
+  wrapped: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf(['wrap', 'none', 'reversed'])
+  ]),
   justify: PropTypes.oneOf([
     'start',
     'center',

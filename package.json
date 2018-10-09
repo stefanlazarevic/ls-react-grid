@@ -1,7 +1,7 @@
 {
   "name": "ls-react-grid",
-  "version": "0.1.1",
-  "description": "React implementation of grid system based on flex css property and bootstrap grid syntax.",
+  "version": "0.2.0",
+  "description": "React implementation of grid system based on flex css property, styled-components and bootstrap grid syntax.",
   "author": "stefanlazarevic",
   "license": "MIT",
   "repository": "stefanlazarevic/ls-react-grid",
